@@ -1,0 +1,309 @@
+[
+    {
+      "product_id": "L001",
+      "product_title": "Dell XPS 13",
+      "product_image": "https://i.ibb.co.com/sKpw8TR/Dell-XPS-13.webp",
+      "category": "Laptops",
+      "price": 999,
+      "description": "A sleek, powerful ultrabook for professionals.",
+      "specification": [
+        "13.3-inch InfinityEdge display",
+        "Intel Core i7",
+        "16GB RAM",
+        "512GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "L002",
+      "product_title": "Asus ExpertBook B1",
+      "product_image": "https://i.ibb.co.com/5xr11M7/Asus-Expert-Book-B1-B1502-CGA.webp",
+      "category": "Laptops",
+      "price": 850,
+      "description": "Business-class laptop with durability and performance.",
+      "specification": [
+        "14-inch Full HD display",
+        "Intel Core i5",
+        "8GB RAM",
+        "256GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "L003",
+      "product_title": "HP Spectre x360",
+      "product_image": "https://i.ibb.co.com/XyNzCJw/HP-Spectre-x360.webp",
+      "category": "Laptops",
+      "price": 1250,
+      "description": "2-in-1 convertible laptop with stunning design.",
+      "specification": [
+        "13.5-inch touchscreen",
+        "Intel Core i7",
+        "16GB RAM",
+        "1TB SSD"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "L004",
+      "product_title": "Lenovo ThinkPad X1 Carbon",
+      "product_image": "https://i.ibb.co.com/48gSDFf/Lenovo-Think-Pad-X1-Carbon.webp",
+      "category": "Laptops",
+      "price": 1400,
+      "description": "Lightweight, durable, and powerful for professionals.",
+      "specification": [
+        "14-inch Full HD display",
+        "Intel Core i7",
+        "16GB RAM",
+        "512GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "L005",
+      "product_title": "Asus ROG Zephyrus G14",
+      "product_image": "https://i.ibb.co.com/3pxpnqZ/Asus-ROG-Zephyrus-G14.png",
+      "category": "Laptops",
+      "price": 1450,
+      "description": "Gaming laptop with incredible performance.",
+      "specification": [
+        "14-inch WQHD display",
+        "AMD Ryzen 9",
+        "32GB RAM",
+        "1TB SSD"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "L006",
+      "product_title": "Microsoft Surface Laptop 5",
+      "product_image": "https://i.ibb.co.com/s3JgQ72/Microsoft-Surface-Laptop-5.jpg",
+      "category": "Laptops",
+      "price": 1300,
+      "description": "Stylish and lightweight laptop with Windows 11.",
+      "specification": [
+        "13.5-inch PixelSense touchscreen",
+        "Intel Core i7",
+        "16GB RAM",
+        "512GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P001",
+      "product_title": "Apple iPhone 15 Pro Max",
+      "product_image": "https://i.ibb.co.com/M9wK3fQ/Apple-i-Phone-15-Pro-Max.webp",
+      "category": "Phones",
+      "price": 1299,
+      "description": "Experience the ultimate smartphone.",
+      "specification": [
+        "6.7-inch Super Retina XDR display",
+        "A17 Bionic chip",
+        "Triple-camera system"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P002",
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://i.ibb.co.com/gSvxGRQ/Samsung-Galaxy-S23-Ultra.jpg",
+      "category": "Phones",
+      "price": 1199,
+      "description": "Premium smartphone with powerful features.",
+      "specification": [
+        "6.8-inch Dynamic AMOLED display",
+        "Snapdragon 8 Gen 2",
+        "108MP quad-camera"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P003",
+      "product_title": "Google Pixel 7 Pro",
+      "product_image": "https://i.ibb.co.com/34Vfycz/Pixel-7-Pro-Obsidian-custom-mac-bd.webp",
+      "category": "Phones",
+      "price": 899,
+      "description": "Pixel-perfect smartphone with advanced AI.",
+      "specification": [
+        "6.7-inch OLED display",
+        "Google Tensor G2",
+        "50MP triple-camera"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P004",
+      "product_title": "OnePlus 11",
+      "product_image": "https://i.ibb.co.com/c3zZhnp/One-Plus-11.png",
+      "category": "Phones",
+      "price": 699,
+      "description": "Fast and smooth flagship killer.",
+      "specification": [
+        "6.7-inch AMOLED display",
+        "Snapdragon 8 Gen 2",
+        "50MP triple-camera"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "S001",
+      "product_title": "Apple Watch Series 9",
+      "product_image": "https://i.ibb.co.com/TWVmF2Z/Apple-Watch-Series-9.jpg",
+      "category": "Smartwatches",
+      "price": 399,
+      "description": "The ultimate health and fitness companion.",
+      "specification": [
+        "Always-on Retina display",
+        "Heart rate and ECG monitoring",
+        "Up to 18 hours battery life"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "S002",
+      "product_title": "Samsung Galaxy Watch 6",
+      "product_image": "https://i.ibb.co.com/qyH6DdG/Samsung-Galaxy-Watch-6.jpg",
+      "category": "Smartwatches",
+      "price": 349,
+      "description": "Smartwatch with advanced health tracking.",
+      "specification": [
+        "1.5-inch AMOLED display",
+        "Blood oxygen and sleep monitoring",
+        "Up to 40 hours battery life"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "S003",
+      "product_title": "Fitbit Versa 4",
+      "product_image": "https://i.ibb.co.com/2vR9kbC/Fitbit-Versa-4.jpg",
+      "category": "Smartwatches",
+      "price": 229,
+      "description": "Fitness smartwatch with 24/7 heart rate tracking.",
+      "specification": [
+        "1.4-inch color touchscreen",
+        "Up to 6 days battery life",
+        "Built-in GPS"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "A001",
+      "product_title": "Sony WH-1000XM5",
+      "product_image": "https://i.ibb.co.com/VMJ12Mr/Sony-WH-1000-XM5.jpg",
+      "category": "Accessories",
+      "price": 399,
+      "description": "Noise-canceling headphones with premium sound.",
+      "specification": [
+        "30 hours battery life",
+        "Touch controls",
+        "Hi-Res audio"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "A002",
+      "product_title": "Logitech MX Master 3",
+      "product_image": "https://i.ibb.co.com/NN2HHJK/Logitech-MX-Master-3.webp",
+      "category": "Accessories",
+      "price": 99,
+      "description": "Precision mouse for professionals.",
+      "specification": [
+        "7 buttons",
+        "USB-C charging",
+        "Customizable controls"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "A003",
+      "product_title": "Anker PowerCore 26800",
+      "product_image": "https://i.ibb.co.com/HBjTMLX/Anker-Power-Core-26800.jpg",
+      "category": "Accessories",
+      "price": 69,
+      "description": "High-capacity portable power bank.",
+      "specification": [
+        "26,800mAh capacity",
+        "3 USB ports",
+        "Fast charging support"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "T001",
+      "product_title": "iPad Pro 12.9",
+      "product_image": "https://i.ibb.co.com/fvpmYPK/i-Pad-Pro-12-9.jpg",
+      "category": "Tablets",
+      "price": 1099,
+      "description": "The ultimate tablet for productivity.",
+      "specification": [
+        "12.9-inch Liquid Retina XDR display",
+        "M2 chip",
+        "Apple Pencil support"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "T002",
+      "product_title": "Samsung Galaxy Tab S8",
+      "product_image": "https://i.ibb.co.com/SvhFDLT/Samsung-Galaxy-Tab-S8.jpg",
+      "category": "Tablets",
+      "price": 899,
+      "description": "High-performance Android tablet.",
+      "specification": [
+        "11-inch TFT LCD display",
+        "Snapdragon 8 Gen 1",
+        "S Pen support"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "M001",
+      "product_title": "MacBook Air M2",
+      "product_image": "https://i.ibb.co.com/Vx3qzjz/Mac-Book-Air-M2.webp",
+      "category": "MacBooks",
+      "price": 1199,
+      "description": "Lightweight and powerful MacBook.",
+      "specification": [
+        "13.6-inch Liquid Retina display",
+        "M2 chip",
+        "256GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "M002",
+      "product_title": "MacBook Pro 16 M2 Pro",
+      "product_image": "https://i.ibb.co.com/d2dJCgz/Mac-Book-Pro-16-M2-Pro.webp",
+      "category": "MacBooks",
+      "price": 2499,
+      "description": "Professional-grade MacBook with superior performance.",
+      "specification": [
+        "16-inch Liquid Retina XDR display",
+        "M2 Pro chip",
+        "1TB SSD"
+      ],
+      "availability": true,
+      "rating": 4.9
+    }
+  ]
+  
