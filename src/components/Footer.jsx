@@ -6,7 +6,8 @@ const Footer = () => {
             <div className="flex justify-center mt-12 pb-4">
                 <Heading
                     title={'Gadget Heaven'}
-                    subtitle={'Leading the way in cutting-edge technology and innovation.'}>
+                    subtitle={'Leading the way in cutting-edge technology and innovation.'}
+                    tc={'text-black'} stc={'text-neutral-400'}>
                 </Heading>
             </div>
             <div className="border-t border-neutral-200 max-w-6xl mx-auto"></div>

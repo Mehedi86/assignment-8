@@ -1,9 +1,9 @@
 
-const Heading = ({title, subtitle}) => {
+const Heading = ({title, subtitle, tc, stc}) => {
     return (
         <div className="text-center">
-            <h1 className="text-4xl font-semibold">{title}</h1>
-            <p className="text-neutral-400 font-semibold py-2">{subtitle}</p>
+            <h1 className={`text-4xl font-semibold ${tc}`}>{title}</h1>
+            <p className={`font-semibold py-2 ${stc}`}>{subtitle}</p>
         </div>
     );
 };
