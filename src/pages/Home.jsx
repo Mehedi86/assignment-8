@@ -10,7 +10,6 @@ const Home = () => {
         setLoadByCategory(category);
     }
 
-    console.log(loadByCatgory);
     return (
         <div className="my-12">
             <div className="text-center">

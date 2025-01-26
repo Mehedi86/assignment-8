@@ -1,19 +1,23 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 const SingleGadgetCard = ({ gadget }) => {
 
-    const { product_title, product_image,
+    const { product_title, product_image, product_id,
         price } = gadget;
     return (
         <div className="card bg-base-100 shadow-sm">
             <figure className="px-6 pt-6">
-                <img src={product_image} alt="Shoes" className="rounded-xl w-full h-[250px] border-2 border-base-300"/>
+                <img src={product_image} alt="Shoes" className="rounded-xl w-full h-[250px] border-2 border-base-300" />
             </figure>
             <div className="card-body ">
                 <h2 className="text-xl font-bold">{product_title}</h2>
                 <p className="text-lg font-semibold text-neutral-400">Price: {price}$</p>
                 <div>
-                    <button className="px-4 py-2 border border rounded-3xl text-[#9538E2] font-bold cursor-pointer hover:scale-105">View Details</button>
+                    <Link to={`/gadgets/${product_id}`}>
+                        <button className="px-4 py-2 border border rounded-3xl text-[#9538E2] font-bold cursor-pointer hover:scale-105">View Details</button>
+                    </Link>
+
                 </div>
             </div>
         </div>

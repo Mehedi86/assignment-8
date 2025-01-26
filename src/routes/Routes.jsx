@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Mainlayout from "../layout/MainLayout";
 import Dashboard from "../pages/Dashboard";
 import Statistics from "../pages/Statistics";
+import GadgetDetails from "../pages/GadgetDetails";
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <Dashboard />
+            },
+            {
+                path: '/gadgets/:id',
+                loader: () => fetch('../gadgets.json'),
+                element:<GadgetDetails/>
             }
         ]
     }
