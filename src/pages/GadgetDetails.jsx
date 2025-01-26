@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Heading from "../components/Heading";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
+import { addItemToCart } from "../utils/loacalStorage";
 
 const GadgetDetails = () => {
     const [gadgetDetails, setGadgetDetails] = useState({ specification: [] });
@@ -15,7 +16,11 @@ const GadgetDetails = () => {
     }, [gadgets, id])
 
     const { product_title, product_image, price, availability, description, rating, specification } = gadgetDetails;
-    console.log(specification)
+
+    const addToCartBtnHandler = (item) => {
+        addItemToCart(item);
+    }
+
     return (
         <div>
             <div className="min-h-[360px] bg-[#9538E2] pt-8 ">
@@ -46,7 +51,7 @@ const GadgetDetails = () => {
                         <span className="px-4 py-1 rounded-3xl bg-neutral-200 font-semibold">{rating}</span>
                     </div>
                     <div className="flex gap-4">
-                        <button className="btn mt-6 rounded-3xl font-bold text-white bg-[#9538E2]">Add To Cart <IoCartOutline size={20} /></button>
+                        <button onClick={() => addToCartBtnHandler(gadgetDetails)} className="btn mt-6 rounded-3xl font-bold text-white bg-[#9538E2]">Add To Cart <IoCartOutline size={20} /></button>
                         <button className="btn mt-6 rounded-full font-bold"><CiHeart size={20} /></button>
                     </div>
                 </div>
