@@ -1,11 +1,11 @@
 import DashboardCard from "./DashboardCard";
 import PropTypes from 'prop-types'
 
-const WishlistContainer = ({ wishlist, cardRemoveBtn }) => {
+const WishlistContainer = ({ wishlist, cardRemoveBtn, addtocartBtnRS }) => {
     return (
         <div>
             <div>
-                {wishlist.map((item, id) => <DashboardCard key={id} item={item} cardRemoveBtn={cardRemoveBtn}/>)}
+                {wishlist.map((item, id) => <DashboardCard key={id} item={item} cardRemoveBtn={cardRemoveBtn} addtocartBtnRS={addtocartBtnRS}/>)}
             </div>
         </div>
     );
@@ -13,7 +13,8 @@ const WishlistContainer = ({ wishlist, cardRemoveBtn }) => {
 
 WishlistContainer.propTypes = {
     wishlist: PropTypes.array.isRequired,
-    cardRemoveBtn: PropTypes.func.isRequired
+    cardRemoveBtn: PropTypes.func.isRequired,
+    addtocartBtnRS: PropTypes.string.isRequired
 }
 
 export default WishlistContainer;

@@ -6,12 +6,14 @@ import Dashboard from "../pages/Dashboard";
 import Statistics from "../pages/Statistics";
 import GadgetDetails from "../pages/GadgetDetails";
 import About from "../pages/About";
+import Errorpage from "../components/Errorpage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Mainlayout />,
+        errorElement: <Errorpage/>,
         children: [
             {
                 path: '/',

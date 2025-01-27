@@ -1,6 +1,6 @@
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const location = useLocation();
@@ -11,7 +11,7 @@ const Navbar = () => {
                     <a className="btn btn-ghost text-xl">Gadget Heaven</a>
                 </div>
                 <div className="navbar-center text-white">
-                <ul className="flex gap-4">
+                    <ul className="flex gap-4">
                         <NavLink to='/' className={({ isActive }) => isActive ? 'font-bold underline' : ''}>Home</NavLink>
                         <NavLink to='/statistics' className={({ isActive }) => isActive ? 'font-bold underline' : ''}>Statistics</NavLink>
                         <NavLink to='/dashboard' className={({ isActive }) => isActive ? 'font-bold underline' : ''}>Dashboard</NavLink>
@@ -26,7 +26,7 @@ const Navbar = () => {
                         <CiHeart size={20} />
                     </button>
                 </div>
-            </div>) : (<div className="container mx-auto navbar">
+            </div>) : (<div className="bg-neutral-200"><div className="container mx-auto navbar">
                 <div className="navbar-start">
                     <a className="btn btn-ghost text-xl">Gadget Heaven</a>
                 </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
                         <CiHeart size={20} />
                     </button>
                 </div>
-            </div>)}
+            </div></div>)}
 
         </>
     );

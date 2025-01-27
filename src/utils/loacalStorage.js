@@ -39,8 +39,14 @@ const getWishlistItem = () => {
 
 const addItemToWishlist = (item) => {
     const wishlist = getWishlistItem();
-    wishlist.push(item);
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    const isExist = wishlist.find(w => w.product_id == item.product_id);
+    if (isExist) {
+        return;
+    }
+    else {
+        wishlist.push(item);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
 }
 
 const removeItemFromWishlist = (id) => {

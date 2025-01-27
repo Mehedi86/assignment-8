@@ -3,28 +3,44 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Heading from "../components/Heading";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import { addItemToCart, addItemToWishlist } from "../utils/loacalStorage";
+import { addItemToCart, addItemToWishlist, getWishlistItem } from "../utils/loacalStorage";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 
 const GadgetDetails = () => {
     const [gadgetDetails, setGadgetDetails] = useState({ specification: [] });
+    const [wishlistBtn, setWishlistBtn] = useState(false);
     const { id } = useParams();
     const gadgets = useLoaderData();
 
     useEffect(() => {
         const gadgetThatShow = gadgets.find(gadget => gadget.product_id == id);
         setGadgetDetails(gadgetThatShow);
+        const checkWishlist = ((getWishlistItem()).find(g => g.product_id == gadgetThatShow.product_id));
+        if (checkWishlist) {
+            setWishlistBtn(true);
+        }
+        else {
+            setWishlistBtn(false)
+        }
     }, [gadgets, id])
 
     const { product_title, product_image, price, availability, description, rating, specification } = gadgetDetails;
 
+    const notifyAddToCart = () => toast.info("Product Successfully added to Cart!");
+    const notifyAddToWishlist = () => toast("Product Successfully added to Wishlist!");
+
     const addToCartBtnHandler = (item) => {
         addItemToCart(item);
+        notifyAddToCart();
     }
     const addToWishListBtnHandler = (item) => {
         addItemToWishlist(item);
+        notifyAddToWishlist();
+        setWishlistBtn(true);
     }
     const ratingNumber = () => {
         const ratingsNumber = [];
@@ -33,7 +49,6 @@ const GadgetDetails = () => {
         }
         return ratingsNumber;
     }
-    console.log(ratingNumber())
 
     return (
         <div>
@@ -72,10 +87,12 @@ const GadgetDetails = () => {
                     </div>
                     <div className="flex gap-4">
                         <button onClick={() => addToCartBtnHandler(gadgetDetails)} className="btn mt-6 rounded-3xl font-bold text-white bg-[#9538E2]">Add To Cart <IoCartOutline size={20} /></button>
-                        <button onClick={() => addToWishListBtnHandler(gadgetDetails)} className="btn mt-6 rounded-full font-bold"><CiHeart size={20} /></button>
+                        <button disabled={wishlistBtn} onClick={() => addToWishListBtnHandler(gadgetDetails)} className="btn mt-6 rounded-full font-bold"><CiHeart size={20} /></button>
                     </div>
                 </div>
             </div>
+            {/* toast */}
+            <ToastContainer />
         </div>
     );
 };

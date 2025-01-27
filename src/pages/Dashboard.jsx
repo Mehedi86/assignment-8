@@ -32,10 +32,12 @@ const Dashboard = () => {
     }
 
     const purchaseBtnHandler = () => {
+        document.getElementById('my_modal_1').showModal();
         removeAllItemfromCart();
         const cartItem = getCartItem();
         setCart(cartItem);
     }
+
     return (
         <div>
             <div className="min-h-[250px] bg-[#9538E2] pt-8 ">

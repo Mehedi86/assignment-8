@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import { MdOutlineCancel } from "react-icons/md";
 
 const DashboardCard = ({ item, cardRemoveBtn, addtocartBtnRS }) => {
-    console.log(addtocartBtnRS)
 
     const { product_title, product_image, price, description, product_id } = item;
     return (
@@ -26,7 +25,7 @@ const DashboardCard = ({ item, cardRemoveBtn, addtocartBtnRS }) => {
 DashboardCard.propTypes = {
     item: PropTypes.object.isRequired,
     cardRemoveBtn: PropTypes.func.isRequired,
-    addtocartBtnRS: PropTypes.string.isRequired
+    addtocartBtnRS: PropTypes.string
 
 }
 
