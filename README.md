@@ -1,8 +1,29 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# live website link
 
-Currently, two official plugins are available:
+- https://cute-maamoul-ea7630.netlify.app/gadgets/L001
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#  Requirement document link
+
+- https://github.com/ProgrammingHero1/B10-A8-gadget-heaven
+
+# List of React Fundamental concepts used in the project
+
+- useState hook, useEffect hook, react-router-dom, react-component like react-toastify,   react-icons etc. 
+
+- using ternery operator into jsx file 
+- conditional rendering
+- reusable components
+- same in look but different in data  
+
+# Used for handling and managing data (contextAPI/local storage)
+
+- Local Storage
+
+# Five feature of this website/Project
+
+- Using local storage 
+- Using react toast for notification
+- Active button or state showing
+- Navbar design 
+- Find product by category
