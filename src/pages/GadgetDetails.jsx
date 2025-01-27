@@ -4,6 +4,9 @@ import Heading from "../components/Heading";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { addItemToCart, addItemToWishlist } from "../utils/loacalStorage";
+import { FaStar } from "react-icons/fa";
+import { FaStarHalf } from "react-icons/fa";
+
 
 const GadgetDetails = () => {
     const [gadgetDetails, setGadgetDetails] = useState({ specification: [] });
@@ -23,6 +26,14 @@ const GadgetDetails = () => {
     const addToWishListBtnHandler = (item) => {
         addItemToWishlist(item);
     }
+    const ratingNumber = () => {
+        const ratingsNumber = [];
+        for (let i = 1; i < rating; i++) {
+            ratingsNumber.push(i);
+        }
+        return ratingsNumber;
+    }
+    console.log(ratingNumber())
 
     return (
         <div>
@@ -51,7 +62,13 @@ const GadgetDetails = () => {
                     </div>
                     <div>
                         <h2 className="text-xl py-2 font-bold mb-2">Rating</h2>
-                        <span className="px-4 py-1 rounded-3xl bg-neutral-200 font-semibold">{rating}</span>
+                        <div className="flex items-center gap-4">
+                            <div className="flex">
+                                {(ratingNumber().map((r, i) => <FaStar key={i} className="text-amber-400" size={40} />))}
+                                {(rating % 2 !== 0) ? <FaStarHalf className="text-amber-400" size={40} /> : ''}
+                            </div>
+                            <span className="px-4 py-1 rounded-3xl bg-neutral-200 font-semibold">{rating}</span>
+                        </div>
                     </div>
                     <div className="flex gap-4">
                         <button onClick={() => addToCartBtnHandler(gadgetDetails)} className="btn mt-6 rounded-3xl font-bold text-white bg-[#9538E2]">Add To Cart <IoCartOutline size={20} /></button>

@@ -1,6 +1,6 @@
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const location = useLocation();
@@ -11,11 +11,11 @@ const Navbar = () => {
                     <a className="btn btn-ghost text-xl">Gadget Heaven</a>
                 </div>
                 <div className="navbar-center text-white">
-                    <ul className="flex gap-4">
-                        <Link to='/'>Home</Link>
-                        <li><a>Statistics</a></li>
-                        <Link to='/dashboard'>Dashboard</Link>
-                        <li><a>About</a></li>
+                <ul className="flex gap-4">
+                        <NavLink to='/' className={({ isActive }) => isActive ? 'font-bold underline' : ''}>Home</NavLink>
+                        <NavLink to='/statistics' className={({ isActive }) => isActive ? 'font-bold underline' : ''}>Statistics</NavLink>
+                        <NavLink to='/dashboard' className={({ isActive }) => isActive ? 'font-bold underline' : ''}>Dashboard</NavLink>
+                        <NavLink to='/about' className={({ isActive }) => isActive ? 'font-bold underline' : ''}>About</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -32,10 +32,10 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center">
                     <ul className="flex gap-4">
-                    <Link to='/'>Home</Link>
-                        <li><a>Statistics</a></li>
-                        <Link to='/dashboard'>Dashboard</Link>
-                        <li><a>About</a></li>
+                        <NavLink to='/' className={({ isActive }) => isActive ? 'font-bold underline text-purple-400' : ''}>Home</NavLink>
+                        <NavLink to='/statistics' className={({ isActive }) => isActive ? 'font-bold underline text-purple-400' : ''}>Statistics</NavLink>
+                        <NavLink to='/dashboard' className={({ isActive }) => isActive ? 'font-bold underline text-purple-400' : ''}>Dashboard</NavLink>
+                        <NavLink to='/about' className={({ isActive }) => isActive ? 'font-bold underline text-purple-400' : ''}>About</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">

@@ -5,6 +5,7 @@ import Mainlayout from "../layout/MainLayout";
 import Dashboard from "../pages/Dashboard";
 import Statistics from "../pages/Statistics";
 import GadgetDetails from "../pages/GadgetDetails";
+import About from "../pages/About";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <Dashboard />
+            },
+            {
+                path: '/about',
+                element: <About/>
+
             },
             {
                 path: '/gadgets/:id',
