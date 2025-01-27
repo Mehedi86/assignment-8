@@ -16,6 +16,21 @@
       "rating": 4.7
     },
     {
+      "product_id": "M002",
+      "product_title": "MacBook Pro 16 M2 Pro",
+      "product_image": "https://i.ibb.co.com/d2dJCgz/Mac-Book-Pro-16-M2-Pro.webp",
+      "category": "MacBooks",
+      "price": 2499,
+      "description": "Professional-grade MacBook with superior performance.",
+      "specification": [
+        "16-inch Liquid Retina XDR display",
+        "M2 Pro chip",
+        "1TB SSD"
+      ],
+      "availability": false,
+      "rating": 4.9
+    },
+    {
       "product_id": "L002",
       "product_title": "Asus ExpertBook B1",
       "product_image": "https://i.ibb.co.com/5xr11M7/Asus-Expert-Book-B1-B1502-CGA.webp",
@@ -289,21 +304,6 @@
       ],
       "availability": true,
       "rating": 4.8
-    },
-    {
-      "product_id": "M002",
-      "product_title": "MacBook Pro 16 M2 Pro",
-      "product_image": "https://i.ibb.co.com/d2dJCgz/Mac-Book-Pro-16-M2-Pro.webp",
-      "category": "MacBooks",
-      "price": 2499,
-      "description": "Professional-grade MacBook with superior performance.",
-      "specification": [
-        "16-inch Liquid Retina XDR display",
-        "M2 Pro chip",
-        "1TB SSD"
-      ],
-      "availability": false,
-      "rating": 4.9
-    }
+    } 
   ]
   
