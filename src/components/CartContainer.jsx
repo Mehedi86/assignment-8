@@ -1,11 +1,55 @@
+import { useEffect, useState } from "react";
 import DashboardCard from "./DashboardCard";
+import PropTypes from 'prop-types'
 
-const CartContainer = ({cart, cartItemRemoveBtnHandler}) => {
+const CartContainer = ({ cart, cartItemRemoveBtnHandler }) => {
+    const [totalCost, setTotalCost] = useState(0);
+    const [isActive, setIsActive] = useState(false);
+    const [sortCart, setSortCart] = useState([]);
+
+
+    useEffect(() => {
+        let cost = 0;
+        for (const c of cart) {
+            cost = cost + c.price;
+        }
+        setTotalCost(cost);
+    }, [cart])
+
+    useEffect(() => {
+        const sorted = [...cart].sort((a, b) => b.price - a.price);
+        setSortCart(sorted);
+    }, [cart, isActive])
+
+    const sortBtnHandler = (status) => {
+        setIsActive(status);
+    }
+
     return (
         <div>
-            {cart.map(item=> <DashboardCard key={item.product_id} item={item} cartItemRemoveBtnHandler={cartItemRemoveBtnHandler}/>)}
+            <div className="container mx-auto my-4 flex justify-between items-center">
+                <div>
+                    <h2 className="text-xl font-semibold">Cart</h2>
+                </div>
+                <div className="flex items-center gap-2">
+                    <div className="w-44">
+                        <p className="text-xl font-semibold mr-2">Total Cost: {totalCost}$</p>
+                    </div>
+                    <button onClick={() => sortBtnHandler(true)} className="px-12 py-2 rounded-3xl border border-purple-400 cursor-pointer hover:scale-105">Sort By Price</button>
+                    <button className="px-12 py-2 rounded-3xl border border-purple-400 cursor-pointer hover:scale-105">Purchase</button>
+
+                </div>
+            </div>
+            <div>
+                {(isActive ? sortCart : cart).map((item, id) => <DashboardCard key={id} item={item} cartItemRemoveBtnHandler={cartItemRemoveBtnHandler} />)}
+            </div>
         </div>
     );
 };
+
+CartContainer.propTypes = {
+    cart: PropTypes.array.isRequired,
+    cartItemRemoveBtnHandler: PropTypes.func.isRequired
+}
 
 export default CartContainer;
