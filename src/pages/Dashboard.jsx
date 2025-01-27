@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Heading from "../components/Heading";
 import CartContainer from "../components/CartContainer";
 import WishlistContainer from "../components/WishlistContainer";
-import { getCartItem, getWishlistItem, removeItemFromCart, removeItemFromWishlist } from "../utils/loacalStorage";
+import { getCartItem, getWishlistItem, removeAllItemfromCart, removeItemFromCart, removeItemFromWishlist } from "../utils/loacalStorage";
 
 const Dashboard = () => {
     const [isActive, setIsActive] = useState('cartItm');
@@ -30,6 +30,12 @@ const Dashboard = () => {
     const dashboardOptionBtn = (status) => {
         setIsActive(status);
     }
+
+    const purchaseBtnHandler = () => {
+        removeAllItemfromCart();
+        const cartItem = getCartItem();
+        setCart(cartItem);
+    }
     return (
         <div>
             <div className="min-h-[250px] bg-[#9538E2] pt-8 ">
@@ -45,7 +51,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="min-h-[400px]">
-                {isActive === 'cartItm' ? <CartContainer cart={cart} cardRemoveBtn={cartItemRemoveBtnHandler} addtocartBtnRS={isActive} /> : <WishlistContainer wishlist={wishlist} cardRemoveBtn={wishlistItemRemoveBtnHandler} addtocartBtnRS={isActive} />}
+                {isActive === 'cartItm' ? <CartContainer cart={cart} cardRemoveBtn={cartItemRemoveBtnHandler} purchaseBtnHandler={purchaseBtnHandler} addtocartBtnRS={isActive} /> : <WishlistContainer wishlist={wishlist} cardRemoveBtn={wishlistItemRemoveBtnHandler} addtocartBtnRS={isActive} />}
             </div>
         </div>
     );

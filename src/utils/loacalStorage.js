@@ -21,6 +21,11 @@ const removeItemFromCart = (id) => {
 
 }
 
+const removeAllItemfromCart = () => {
+    const cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
 
 // ....................................................Now it for wishlist
 
@@ -45,4 +50,4 @@ const removeItemFromWishlist = (id) => {
 
 }
 
-export { getCartItem, addItemToCart, removeItemFromCart, getWishlistItem, addItemToWishlist, removeItemFromWishlist }
+export { getCartItem, addItemToCart, removeItemFromCart, removeAllItemfromCart, getWishlistItem, addItemToWishlist, removeItemFromWishlist }
