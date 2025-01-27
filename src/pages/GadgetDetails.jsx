@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Heading from "../components/Heading";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import { addItemToCart } from "../utils/loacalStorage";
+import { addItemToCart, addItemToWishlist } from "../utils/loacalStorage";
 
 const GadgetDetails = () => {
     const [gadgetDetails, setGadgetDetails] = useState({ specification: [] });
@@ -19,6 +19,9 @@ const GadgetDetails = () => {
 
     const addToCartBtnHandler = (item) => {
         addItemToCart(item);
+    }
+    const addToWishListBtnHandler = (item) => {
+        addItemToWishlist(item);
     }
 
     return (
@@ -52,7 +55,7 @@ const GadgetDetails = () => {
                     </div>
                     <div className="flex gap-4">
                         <button onClick={() => addToCartBtnHandler(gadgetDetails)} className="btn mt-6 rounded-3xl font-bold text-white bg-[#9538E2]">Add To Cart <IoCartOutline size={20} /></button>
-                        <button className="btn mt-6 rounded-full font-bold"><CiHeart size={20} /></button>
+                        <button onClick={() => addToWishListBtnHandler(gadgetDetails)} className="btn mt-6 rounded-full font-bold"><CiHeart size={20} /></button>
                     </div>
                 </div>
             </div>

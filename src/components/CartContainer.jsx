@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import DashboardCard from "./DashboardCard";
 import PropTypes from 'prop-types'
 
-const CartContainer = ({ cart, cartItemRemoveBtnHandler }) => {
+const CartContainer = ({ cart, cardRemoveBtn, addtocartBtnRS }) => {
     const [totalCost, setTotalCost] = useState(0);
     const [isActive, setIsActive] = useState(false);
     const [sortCart, setSortCart] = useState([]);
@@ -41,7 +41,7 @@ const CartContainer = ({ cart, cartItemRemoveBtnHandler }) => {
                 </div>
             </div>
             <div>
-                {(isActive ? sortCart : cart).map((item, id) => <DashboardCard key={id} item={item} cartItemRemoveBtnHandler={cartItemRemoveBtnHandler} />)}
+                {(isActive ? sortCart : cart).map((item, id) => <DashboardCard key={id} item={item} cardRemoveBtn={cardRemoveBtn} addtocartBtnRS={addtocartBtnRS} />)}
             </div>
         </div>
     );
@@ -49,7 +49,8 @@ const CartContainer = ({ cart, cartItemRemoveBtnHandler }) => {
 
 CartContainer.propTypes = {
     cart: PropTypes.array.isRequired,
-    cartItemRemoveBtnHandler: PropTypes.func.isRequired
+    cardRemoveBtn: PropTypes.func.isRequired,
+    addtocartBtnRS:PropTypes.string.isRequired
 }
 
 export default CartContainer;
